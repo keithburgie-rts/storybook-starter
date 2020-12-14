@@ -1,19 +1,8 @@
 import React from 'react'
-import { Divider } from 'theme-ui'
-import { FormsDemo, ButtonDemo, StyleGuide, TypographyDemo } from './theme/KitchenSink'
+import { KitchenSink } from './theme/KitchenSink'
 
 function App() {
-  return (
-    <>
-      <FormsDemo />
-      <Divider />
-      <ButtonDemo />
-      <Divider />
-      <TypographyDemo />
-      <Divider />
-      <StyleGuide />
-    </>
-  )
+  return <KitchenSink />
 }
 
 export default App

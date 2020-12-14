@@ -5,7 +5,7 @@ export const fonts = {
   monospace: 'Menlo, monospace',
 }
 
-export const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64, 96]
+export const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64]
 
 export const fontWeights = {
   body: 400,
@@ -29,11 +29,18 @@ export const text = {
     fontFamily: 'body',
     lineHeight: 'body',
     fontWeight: 'body',
+    fontSize: 2,
+  },
+  lead: {
+    fontSize: 3,
   },
   heading: {
     color: 'text',
     fontFamily: 'heading',
     lineHeight: 'heading',
     fontWeight: 'heading',
+  },
+  small: {
+    fontSize: 0,
   },
 }
