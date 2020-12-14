@@ -6,9 +6,12 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@theme-ui/color": "^0.3.4",
+    "@theme-ui/style-guide": "^0.3.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
+    "theme-ui": "^0.3.4",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -44,6 +47,8 @@
     "@storybook/node-logger": "^6.2.0-alpha.4",
     "@storybook/preset-create-react-app": "^3.1.5",
     "@storybook/react": "^6.2.0-alpha.4",
-    "babel-loader": "8.1.0"
+    "babel-loader": "8.1.0",
+    "eslint": "^7.15.0",
+    "eslint-plugin-react": "^7.21.5"
   }
 }
