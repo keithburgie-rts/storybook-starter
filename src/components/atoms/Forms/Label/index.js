@@ -9,7 +9,11 @@ import { Box, Label as ThemeUILabel } from 'theme-ui'
 
 export const Label = ({ htmlFor, children, label, ...rest }) => {
   return (
-    <ThemeUILabel htmlFor={htmlFor} sx={{ flexDirection: label ? 'column' : 'row' }} {...rest}>
+    <ThemeUILabel
+      htmlFor={htmlFor}
+      sx={{ position: 'relative', flexDirection: label ? 'column' : 'row' }}
+      {...rest}
+    >
       {label && <Box as="span">{label}</Box>}
       {children}
     </ThemeUILabel>
