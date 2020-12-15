@@ -20,7 +20,7 @@ export const lineHeights = {
 
 export const letterSpacings = {
   body: 'normal',
-  caps: '0.2em',
+  caps: '0.1em',
 }
 
 export const text = {

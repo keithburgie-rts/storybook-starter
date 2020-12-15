@@ -7,11 +7,10 @@ import {
   AccordionButton as ReachAccordionButton,
   AccordionPanel as ReachAccordionPanel,
 } from '@reach/accordion'
-// import '@reach/accordion/styles.css'
 import { Box } from 'theme-ui'
-import { Button, Heading } from '../../atoms'
+import { Button, Heading, PaddedCell } from '../../atoms'
 
-export const Accordion = ({ collapsible = true, multiple = true, children, items, ...rest }) => {
+export const Accordion = ({ collapsible = true, multiple = false, children, items, ...rest }) => {
   Accordion.propTypes = {
     children: PropTypes.node,
     /** receives [{heading: 'foo', content: 'bar'}, {heading: 'foo2', content: 'bar2'}] */
@@ -47,7 +46,72 @@ export const AccordionItem = ({ children, ...rest }) => {
     children: PropTypes.node.isRequired,
   }
   return (
-    <Box as={ReachAccordionItem} {...rest}>
+    <Box
+      as={ReachAccordionItem}
+      {...rest}
+      sx={{
+        '&:first-of-type button': {
+          borderTopLeftRadius: 1,
+          borderTopRightRadius: 1,
+        },
+        '&:last-of-type': {
+          '& [data-reach-accordion-panel], &[data-state="collapsed"] button': {
+            borderBottomWidth: 1,
+            borderBottomLeftRadius: 1,
+            borderBottomRightRadius: 1,
+          },
+        },
+        '&[data-state="open"]': {
+          '& button': {
+            color: 'primary',
+            backgroundColor: 'muted',
+            '&::after': {
+              transform: 'rotate(180deg)',
+            },
+          },
+        },
+        '&[data-state="collapsed"] button': {
+          borderBottomWidth: 0,
+        },
+        '& [data-reach-accordion-panel]': {
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderLeftWidth: 1,
+          borderRightWidth: 1,
+          borderStyle: 1,
+          borderColor: 'borders',
+          '&:focus': {
+            outline: 0,
+          },
+        },
+        '& button': {
+          borderRadius: 0,
+          borderWidth: 1,
+          borderStyle: 1,
+          borderColor: 'borders',
+          padding: 0,
+          alignItems: 'center',
+          justifyContent: 'space-between',
+
+          '&:focus': {
+            borderColor: 'primary',
+            boxShadow: (theme) => `0 0 0 4px ${theme.colors.focus}`,
+            outline: 0,
+          },
+          '&::after': {
+            content: '""',
+            position: 'relative',
+            backgroundImage: 'url(https://static.thenounproject.com/png/427197-200.png)',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            width: 5,
+            height: 5,
+            right: 5, // TODO: Make this match padded cell if that component changes
+            transition: 'transform .2s ease-in-out',
+          },
+        },
+      }}
+    >
       {children}
     </Box>
   )
@@ -61,7 +125,9 @@ export const AccordionItemHeading = ({ as = 'h3', value, children, ...rest }) =>
   }
   return (
     <Heading as={as} {...rest}>
-      <Button as={ReachAccordionButton}>{value || children}</Button>
+      <AccordionButton>
+        <PaddedCell>{value || children}</PaddedCell>
+      </AccordionButton>
     </Heading>
   )
 }
@@ -72,10 +138,14 @@ export const AccordionItemPanel = ({ value, children, ...rest }) => {
     children: PropTypes.node,
   }
   return (
-    <Box as={ReachAccordionPanel} {...rest}>
-      {value || children}
+    <Box as={ReachAccordionPanel} {...rest} sx={{ borderWidth: '0 1px', borderStyle: 'solid' }}>
+      <PaddedCell>{value || children}</PaddedCell>
     </Box>
   )
+}
+
+export const AccordionButton = ({ ...props }) => {
+  return <Button as={ReachAccordionButton} variant="link" block {...props} />
 }
 
 /* 

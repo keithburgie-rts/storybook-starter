@@ -1,1 +1,0 @@
-Use [Box](https://theme-ui.com/components/box/), [Flex](https://theme-ui.com/components/flex/), and [Grid](https://theme-ui.com/components/grid/) from Theme UI until we have reason to make our own containers.
