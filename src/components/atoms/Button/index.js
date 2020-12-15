@@ -67,5 +67,5 @@ Button.propTypes = {
   large: PropTypes.bool,
   block: PropTypes.bool,
   outline: PropTypes.bool,
-  variant: PropTypes.oneOf(['primary', 'secondary']),
+  variant: PropTypes.oneOf(['primary', 'secondary', 'link']),
 }

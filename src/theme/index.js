@@ -5,11 +5,13 @@ import colors from './colors'
 import forms from './forms'
 // import { layout } from './layout';
 // import { nav } from './nav';
-import space from './space'
+import { sizes } from './sizes'
+import { space } from './space'
 import { fonts, fontSizes, fontWeights, lineHeights, letterSpacings, text } from './typography'
 
 export const theme = {
   space,
+  sizes,
   breakpoints: ['40em', '56em', '64em'],
   fonts,
   fontSizes,
@@ -20,6 +22,21 @@ export const theme = {
   text,
   colors,
   forms,
+  radii: [0, 4],
+  borders: [0, 1],
+  borderWidths: [0, 1, 2, 4],
+  borderStyles: [
+    'none',
+    'solid',
+    'dashed',
+    'dotted',
+    'double',
+    'groove',
+    'ridge',
+    'inset',
+    'outset',
+    'dotted solid double dashed',
+  ],
   cards: {
     primary: {
       padding: 2,

@@ -1,5 +1,5 @@
 export { Button } from './Button'
-// export {Container} from './Container'
+export { PaddedCell } from './Containers'
 // export {Forms} from './Forms'
 export { Heading } from './Heading'
 export { Icon } from './Icon'

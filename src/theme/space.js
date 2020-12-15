@@ -21,27 +21,4 @@
 
 // import { remCalc } from '../utils/active_support'
 
-export default {
-  0: 0,
-  1: 4,
-  2: 8,
-  3: 12,
-  4: 16,
-  5: 20,
-  6: 24,
-  7: 28,
-  8: 32,
-  10: 40,
-  12: 48,
-  16: 64,
-  32: 128,
-  formInputHeight: 60,
-  formTextareaHeight: 254,
-
-  // get formLabelHeight() {
-  //   return thisformInputHeight, 0.5)
-  // },
-  get formPaddingX() {
-    return this[5]
-  },
-}
+export const space = [0, 4, 8, 12, 16, 20, 24, 28, 32, 40, 48, 64, 128]

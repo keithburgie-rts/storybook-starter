@@ -9,30 +9,41 @@
   https://theme-ui.com/packages/color
 */
 
-export default {
-  text: '#000',
-  background: '#fff',
-  primary: '#07c',
-  secondary: '#30c',
-  accent: '#4c3',
-  highlight: '#F1c',
-  muted: '#f6f6f6',
-  links: '#30c',
+export const hexToRGBA = (hex, alpha) => {
+  var r = parseInt(hex.slice(1, 3), 16),
+    g = parseInt(hex.slice(3, 5), 16),
+    b = parseInt(hex.slice(5, 7), 16)
 
+  if (alpha) {
+    return 'rgba(' + r + ', ' + g + ', ' + b + ', ' + alpha + ')'
+  } else {
+    return 'rgb(' + r + ', ' + g + ', ' + b + ')'
+  }
+}
+
+export default {
+  text: '#000000',
+  background: '#ffffff',
+  primary: '#0077cc',
+  secondary: '#3300cc',
+  accent: '#44cc33',
+  highlight: '#FF11cc',
+  muted: '#f6f6f6',
+  links: '#3300cc',
+  get borders() {
+    return hexToRGBA(this.text, 0.25)
+  },
+  get focus() {
+    return hexToRGBA(this.primary, 0.25)
+  },
   modes: {
     dark: {
-      text: '#fff',
-      background: '#000',
-      primary: '#0cf',
-      secondary: '#09c',
-      muted: '#111',
-      links: '#0cf',
-    },
-    papaya: {
-      // this color mode will fallback to the root color object
-      // for values not defined here
-      text: '#433',
-      background: 'papayawhip',
+      text: '#ffffff',
+      background: '#000000',
+      primary: '#00ccff',
+      secondary: '#0099cc',
+      muted: '#111111',
+      links: '#00ccff',
     },
   },
 }

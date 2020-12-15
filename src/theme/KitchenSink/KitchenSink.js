@@ -3,6 +3,7 @@ import React from 'react'
 import { Box, Grid } from 'theme-ui'
 import { Heading, ListItem, Paragraph } from '../../components/atoms'
 import { List, SectionGroup } from '../../components/molecules'
+import { Accordion } from '../../components/organisms/'
 import { ButtonDemo } from './ButtonDemo'
 import { FontFamilies } from './FontFamilies'
 import { FormsDemo } from './FormsDemo'
@@ -78,6 +79,24 @@ export const KitchenSink = () => {
       <Box sx={{ bg: 'muted', px: 4 }}>
         <SectionGroup label="Buttons">
           <ButtonDemo />
+        </SectionGroup>
+        <SectionGroup label="Accordion">
+          <Accordion
+            items={[
+              {
+                heading: "I'm a heading",
+                content: 'This is the body of an accordion panel',
+              },
+              {
+                heading: "I'm also a heading",
+                content: 'This is the body of another accordion panel',
+              },
+              {
+                heading: 'I am also, also a heading, as well',
+                content: 'This is the body of another accordion panel',
+              },
+            ]}
+          />
         </SectionGroup>
       </Box>
 

@@ -35,4 +35,11 @@ export default {
       bg: 'secondary',
     },
   },
+  link: {
+    color: 'links',
+    bg: 'transparent',
+    '&:hover, &:focus': {
+      color: darken('links', 0.15),
+    },
+  },
 }
