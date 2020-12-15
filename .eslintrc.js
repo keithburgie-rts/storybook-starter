@@ -16,6 +16,7 @@ module.exports = {
     'no-debugger': 1,
     'no-undef': 0,
     'no-unused-vars': 1,
+    // 'react/prop-types': 1,
     'react/no-unescaped-entities': 0,
   },
 }
