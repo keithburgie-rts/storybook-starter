@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Radio as ThemeUIRadio } from 'theme-ui'
+import { Box, Radio as ThemeUIRadio } from 'theme-ui'
 import { Label } from '../Label'
 
 /**
@@ -10,10 +10,12 @@ import { Label } from '../Label'
 
 export const Radio = ({ id, label, ...rest }) => {
   return (
-    <Label htmlFor={id}>
-      <ThemeUIRadio id={id} {...rest} />
-      {label}
-    </Label>
+    <Box>
+      <Label htmlFor={id}>
+        <ThemeUIRadio id={id} {...rest} />
+        {label}
+      </Label>
+    </Box>
   )
 }
 

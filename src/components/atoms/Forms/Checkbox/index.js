@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Checkbox as ThemeUICheckbox } from 'theme-ui'
+import { Box, Checkbox as ThemeUICheckbox } from 'theme-ui'
 import { Label } from '../Label'
 
 /**
@@ -10,10 +10,12 @@ import { Label } from '../Label'
 
 export const Checkbox = ({ id, label, ...rest }) => {
   return (
-    <Label htmlFor={id}>
-      <ThemeUICheckbox id={id} {...rest} />
-      {label}
-    </Label>
+    <Box>
+      <Label htmlFor={id}>
+        <ThemeUICheckbox id={id} {...rest} />
+        {label}
+      </Label>
+    </Box>
   )
 }
 
