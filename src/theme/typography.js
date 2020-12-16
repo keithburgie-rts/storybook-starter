@@ -34,13 +34,13 @@ export const text = {
   lead: {
     fontSize: 3,
   },
+  small: {
+    fontSize: 0,
+  },
   heading: {
     color: 'text',
     fontFamily: 'heading',
     lineHeight: 'heading',
     fontWeight: 'heading',
-  },
-  small: {
-    fontSize: 0,
   },
 }

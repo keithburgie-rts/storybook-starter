@@ -10,8 +10,9 @@ export const SectionGroup = ({ label, children }) => {
     <Box
       sx={{
         py: 4,
-        borderTop: '1px solid',
-        borderTopColor: lightgray,
+        '& + &': {
+          borderTop: (theme) => `1px solid ${theme.colors.borders}`,
+        },
       }}
     >
       {label && (

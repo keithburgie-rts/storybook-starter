@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Heading as ThemeUIHeading } from 'theme-ui'
+import { headingTypes } from '../../../lib/types'
 
 /**
  * Heading
@@ -16,7 +17,7 @@ export const Heading = ({ value, children, as = 'h2', ...rest }) => {
 }
 
 Heading.propTypes = {
-  as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  as: PropTypes.oneOf(headingTypes),
   children: PropTypes.node,
   value: PropTypes.string,
 }
