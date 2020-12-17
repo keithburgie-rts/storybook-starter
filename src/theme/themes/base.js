@@ -39,7 +39,7 @@ import {
   cards,
   // shadows,
   // zIndices
-} from './partials'
+} from '../partials'
 
 export const theme = {
   breakpoints,

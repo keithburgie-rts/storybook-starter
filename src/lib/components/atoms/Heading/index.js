@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Heading as ThemeUIHeading } from 'theme-ui'
-import { headingTypes } from '../../../lib/types'
+import { headingTypes } from '../../../types'
 
 /**
  * Heading

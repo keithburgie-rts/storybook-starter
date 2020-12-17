@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Text as ThemeUIText } from 'theme-ui'
-import { textTypes } from '../../../lib/types'
+import { textTypes } from '../../../types'
 
 /**
  * Paragraph
