@@ -16,3 +16,7 @@ InputGroup.propTypes = {
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.element), PropTypes.element])
     .isRequired,
 }
+
+// Optional uses
+export const CheckboxGroup = ({ ...props }) => <InputGroup {...props} />
+export const RadioGroup = ({ ...props }) => <InputGroup {...props} />

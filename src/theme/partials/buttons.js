@@ -1,6 +1,6 @@
 import { darken } from '@theme-ui/color'
 
-export default {
+export const buttons = {
   primary: {
     color: 'white',
     bg: 'primary',

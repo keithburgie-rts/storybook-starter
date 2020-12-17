@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={JSON.parse(theme)}>
       <App />
     </ThemeProvider>
   </React.StrictMode>,

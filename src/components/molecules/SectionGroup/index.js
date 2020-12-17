@@ -4,8 +4,6 @@ import PropTypes from 'prop-types'
 import { darken } from '@theme-ui/color'
 
 export const SectionGroup = ({ label, children }) => {
-  const lightgray = darken('muted', 0.5)
-
   return (
     <Box
       sx={{
@@ -19,7 +17,7 @@ export const SectionGroup = ({ label, children }) => {
         <Box
           sx={{
             textTransform: 'uppercase',
-            color: lightgray,
+            color: darken('muted', 0.5),
             mb: 2,
           }}
         >
