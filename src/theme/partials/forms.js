@@ -1,10 +1,10 @@
-export default {
+export const forms = {
   label: {
     fontSize: 1,
     fontWeight: 'bold',
   },
   input: {
-    borderColor: 'gray',
+    borderColor: 'borders',
     '&:focus': {
       borderColor: 'primary',
       boxShadow: (theme) => `0 0 0 2px ${theme.colors.primary}`,
@@ -12,7 +12,7 @@ export default {
     },
   },
   select: {
-    borderColor: 'gray',
+    borderColor: 'borders',
     '&:focus': {
       borderColor: 'primary',
       boxShadow: (theme) => `0 0 0 2px ${theme.colors.primary}`,
@@ -20,7 +20,7 @@ export default {
     },
   },
   textarea: {
-    borderColor: 'gray',
+    borderColor: 'borders',
     '&:focus': {
       borderColor: 'primary',
       boxShadow: (theme) => `0 0 0 2px ${theme.colors.primary}`,

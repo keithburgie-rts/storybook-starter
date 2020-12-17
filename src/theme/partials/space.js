@@ -19,6 +19,4 @@
   - right,
 */
 
-// import { remCalc } from '../utils/active_support'
-
 export const space = [0, 4, 8, 12, 16, 20, 24, 28, 32, 40, 48, 64, 128]

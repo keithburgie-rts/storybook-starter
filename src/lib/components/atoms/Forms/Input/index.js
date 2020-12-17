@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Input as ThemeUIInput } from 'theme-ui'
 import { Label } from '../Label'
+import { inputTypes } from '../../../../lib/types'
 
 /**
  * Input
@@ -18,7 +19,7 @@ export const Input = ({ label, type = 'text', name, id, ...rest }) => {
 
 Input.propTypes = {
   label: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(['text', 'password', 'search', 'email']),
+  type: PropTypes.oneOf(inputTypes),
   /** name is the value posted to the server*/
   name: PropTypes.string.isRequired,
   /** id is for JS/CSS and must match the label's htmlFor */

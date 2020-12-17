@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid, Flex, Text } from 'theme-ui'
-import { fontSizes } from '../typography'
+import { fontSizes } from '../partials/typography'
 
 export const TypeScale = () => {
   return (
@@ -13,14 +13,17 @@ export const TypeScale = () => {
     >
       {fontSizes.map((size, index) => (
         <Flex
-          key={index}
+          key={size}
           sx={{
             flexDirection: 'column',
             padding: 2,
-            border: '1px dotted lightgray',
+            border: (theme) => `1px dotted ${theme.colors.borders}`,
           }}
         >
-          <Text as="small" sx={{ borderBottom: '1px solid lightgray', pb: 2, mx: 4 }}>
+          <Text
+            as="small"
+            sx={{ borderBottom: (theme) => `1px solid ${theme.colors.borders}`, pb: 2, mx: 4 }}
+          >
             {index}
           </Text>
           <Flex
