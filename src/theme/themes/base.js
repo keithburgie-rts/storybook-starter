@@ -20,6 +20,7 @@ import { darken } from '@theme-ui/color'
  */
 
 import {
+  alerts,
   breakpoints,
   buttons,
   forms,
@@ -42,6 +43,7 @@ import {
 } from '../partials'
 
 export const theme = {
+  alerts,
   breakpoints,
   colors,
   fonts,

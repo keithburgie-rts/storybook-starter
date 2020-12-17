@@ -1,3 +1,4 @@
+export { alerts } from './alerts'
 export { borders, borderWidths, borderStyles, radii } from './borders'
 export { breakpoints } from './breakpoints'
 export { buttons } from './buttons'

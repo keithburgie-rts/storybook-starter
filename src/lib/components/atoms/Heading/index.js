@@ -8,7 +8,7 @@ import { headingTypes } from '../../../types'
  * @augments {Component<Props, State>}
  */
 
-export const Heading = ({ value, children, as = 'h2', ...rest }) => {
+export const Heading = ({ as = 'h2', value, children, ...rest }) => {
   return (
     <ThemeUIHeading as={as} variant={`styles.${as}`} {...rest}>
       {value || children}

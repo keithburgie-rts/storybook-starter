@@ -9,6 +9,7 @@ import { FontFamilies } from './FontFamilies'
 import { FormsDemo } from './FormsDemo'
 import { TypeScale } from './TypeScale'
 import { headingTypes, textTypes, listTypes } from '../../lib/types'
+import { Alert } from '../../lib/components/molecules/Alert'
 
 const DEMO_HEADING = 'This is an example heading'
 
@@ -36,53 +37,56 @@ const DEMO_ACCORDION_ITEMS = [
 
 export const KitchenSink = () => {
   return (
-    <Grid gap={0} columns={[1, 2]} sx={{ columnGap: 2, mb: 8 }}>
-      <Box sx={{ bg: 'muted', px: 4 }}>
-        {headingTypes.map((h) => (
-          <SectionGroup label={h} key={h}>
-            <Heading as={h} value={DEMO_HEADING} />
+    <>
+      <Alert heading="I'm an alert" message={DEMO_PARAGRAPH} />
+      <Grid gap={0} columns={[1, 2]} sx={{ columnGap: 2, mb: 8 }}>
+        <Box sx={{ bg: 'muted', px: 4 }}>
+          {headingTypes.map((h) => (
+            <SectionGroup label={h} key={h}>
+              <Heading as={h} value={DEMO_HEADING} />
+            </SectionGroup>
+          ))}
+          {textTypes.map((t) => (
+            <SectionGroup label={`Body (${t})`} key={t}>
+              <Paragraph variant={t} value={DEMO_PARAGRAPH} />
+            </SectionGroup>
+          ))}
+          <SectionGroup label="Lists">
+            <Grid gap={2} columns={2}>
+              {listTypes.map((l) => (
+                <List as={l} key={l} items={DEMO_LIST_ITEMS} />
+              ))}
+            </Grid>
           </SectionGroup>
-        ))}
-        {textTypes.map((t) => (
-          <SectionGroup label={`Body (${t})`} key={t}>
-            <Paragraph variant={t} value={DEMO_PARAGRAPH} />
+        </Box>
+
+        <Box sx={{ px: 4 }}>
+          <SectionGroup label="Type Scale">
+            <TypeScale />
           </SectionGroup>
-        ))}
-        <SectionGroup label="Lists">
-          <Grid gap={2} columns={2}>
-            {listTypes.map((l) => (
-              <List as={l} key={l} items={DEMO_LIST_ITEMS} />
-            ))}
-          </Grid>
-        </SectionGroup>
-      </Box>
+          <SectionGroup label="Font Styles">
+            <FontFamilies />
+          </SectionGroup>
+          <SectionGroup label="Color Palette">
+            <ColorPalette sx={{ textTransform: 'uppercase' }} />
+          </SectionGroup>
+        </Box>
 
-      <Box sx={{ px: 4 }}>
-        <SectionGroup label="Type Scale">
-          <TypeScale />
-        </SectionGroup>
-        <SectionGroup label="Font Styles">
-          <FontFamilies />
-        </SectionGroup>
-        <SectionGroup label="Color Palette">
-          <ColorPalette sx={{ textTransform: 'uppercase' }} />
-        </SectionGroup>
-      </Box>
+        <Box sx={{ bg: 'muted', px: 4 }}>
+          <SectionGroup label="Buttons">
+            <ButtonDemo />
+          </SectionGroup>
+          <SectionGroup label="Accordion">
+            <Accordion items={DEMO_ACCORDION_ITEMS} />
+          </SectionGroup>
+        </Box>
 
-      <Box sx={{ bg: 'muted', px: 4 }}>
-        <SectionGroup label="Buttons">
-          <ButtonDemo />
-        </SectionGroup>
-        <SectionGroup label="Accordion">
-          <Accordion items={DEMO_ACCORDION_ITEMS} />
-        </SectionGroup>
-      </Box>
-
-      <Box sx={{ px: 4 }}>
-        <SectionGroup label="Forms">
-          <FormsDemo />
-        </SectionGroup>
-      </Box>
-    </Grid>
+        <Box sx={{ px: 4 }}>
+          <SectionGroup label="Forms">
+            <FormsDemo />
+          </SectionGroup>
+        </Box>
+      </Grid>
+    </>
   )
 }
