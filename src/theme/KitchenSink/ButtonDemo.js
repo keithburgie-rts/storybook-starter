@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Divider } from 'theme-ui'
-import { Button } from '../../components/atoms'
+import { Button } from '../../lib/components/atoms'
 
 export const ButtonDemo = () => {
   return (

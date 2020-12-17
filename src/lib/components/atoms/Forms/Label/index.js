@@ -10,7 +10,7 @@ import { Box, Label as ThemeUILabel } from 'theme-ui'
 export const Label = ({ htmlFor, children, label, ...rest }) => {
   return (
     <ThemeUILabel
-      htmlFor={htmlFor}
+      htmlFor={`${htmlFor}`}
       sx={{ position: 'relative', flexDirection: label ? 'column' : 'row' }}
       {...rest}
     >
@@ -21,7 +21,7 @@ export const Label = ({ htmlFor, children, label, ...rest }) => {
 }
 
 Label.propTypes = {
-  htmlFor: PropTypes.string.isRequired,
+  htmlFor: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   children: PropTypes.node,
   /** value is the label text */
   label: PropTypes.string,

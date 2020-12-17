@@ -1,8 +1,8 @@
 import React from 'react'
 import { FontFamily } from '@theme-ui/style-guide'
 import { Text, Box } from 'theme-ui'
-import { Icon, TextLink } from '../../components/atoms'
-import { SearchIcon } from '../../components/atoms/Icon/SearchIcon'
+import { Icon, TextLink } from '../../lib/components/atoms'
+import { SearchIcon } from '../../lib/components/atoms/Icon/SearchIcon'
 
 export const FontFamilies = () => (
   <>

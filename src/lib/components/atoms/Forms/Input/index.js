@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Input as ThemeUIInput } from 'theme-ui'
 import { Label } from '../Label'
-import { inputTypes } from '../../../../lib/types'
+import { inputTypes } from '../../../../types'
 
 /**
  * Input
@@ -11,8 +11,8 @@ import { inputTypes } from '../../../../lib/types'
 
 export const Input = ({ label, type = 'text', name, id, ...rest }) => {
   return (
-    <Label htmlFor={id} label={label}>
-      <ThemeUIInput type={type} name={name} id={id} {...rest} />
+    <Label htmlFor={`${id}`} label={label}>
+      <ThemeUIInput type={type} name={`${name}`} id={`${id}`} {...rest} />
     </Label>
   )
 }

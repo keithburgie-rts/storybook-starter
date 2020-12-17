@@ -23,10 +23,10 @@ export const TextArea = ({
   const characterLimit = maxLength.toLocaleString()
 
   return (
-    <Label htmlFor={id} label={label}>
+    <Label htmlFor={`${id}`} label={label}>
       <ThemeUITextarea
-        id={id}
-        name={name}
+        id={`${id}`}
+        name={`${name}`}
         rows="10"
         maxLength={maxLength}
         value={value}
@@ -44,7 +44,7 @@ export const TextArea = ({
 
 TextArea.propTypes = {
   /** id is for JS/CSS and must match the label's htmlFor */
-  id: PropTypes.string.isRequired,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   /** name is the value posted to the server*/
   name: PropTypes.string.isRequired,
   label: PropTypes.string,

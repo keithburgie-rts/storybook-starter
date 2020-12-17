@@ -11,8 +11,8 @@ import { Label } from '../Label'
 export const Checkbox = ({ id, label, ...rest }) => {
   return (
     <Box>
-      <Label htmlFor={id}>
-        <ThemeUICheckbox id={id} {...rest} />
+      <Label htmlFor={`${id}`}>
+        <ThemeUICheckbox id={`${id}`} {...rest} />
         {label}
       </Label>
     </Box>
@@ -20,7 +20,7 @@ export const Checkbox = ({ id, label, ...rest }) => {
 }
 
 Checkbox.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   /** label is the text displayed beside the checkbox */
   label: PropTypes.string,
 }

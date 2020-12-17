@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Text as ThemeUIText } from 'theme-ui'
-import { listTypes } from '../../../lib/types'
+import { listTypes } from '../../../types'
 import { ListItem } from '../../atoms'
 
 /**
@@ -19,6 +19,6 @@ export const List = ({ as = 'ul', items, children, ...rest }) => {
 
 List.propTypes = {
   as: PropTypes.oneOf(listTypes),
-  items: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.element), PropTypes.element]),
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.element), PropTypes.element]),
+  items: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
 }

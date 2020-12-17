@@ -11,8 +11,8 @@ import { Label } from '../Label'
 export const Radio = ({ id, label, ...rest }) => {
   return (
     <Box>
-      <Label htmlFor={id}>
-        <ThemeUIRadio id={id} {...rest} />
+      <Label htmlFor={`${id}`}>
+        <ThemeUIRadio id={`${id}`} {...rest} />
         {label}
       </Label>
     </Box>
@@ -20,7 +20,7 @@ export const Radio = ({ id, label, ...rest }) => {
 }
 
 Radio.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   /** label is the text displayed beside the radio button */
   label: PropTypes.string,
 }

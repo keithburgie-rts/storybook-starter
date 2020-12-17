@@ -9,8 +9,8 @@ import {
   Radio,
   Input,
   TextArea,
-} from '../../components/atoms/Forms'
-import { InputGroup } from '../../components/molecules'
+} from '../../lib/components/atoms/Forms'
+import { InputGroup } from '../../lib/components/molecules'
 import { capitalize } from '../../lib/utils'
 import { inputTypes } from '../../lib/types'
 
@@ -34,6 +34,7 @@ export const FormsDemo = () => {
           {[1, 2, 3].map((i) => (
             <Checkbox
               label={`Checkbox ${i}`}
+              id={`checkbox-${i}`}
               name="checkboxes"
               value={i}
               defaultChecked={i === 1}
@@ -43,7 +44,7 @@ export const FormsDemo = () => {
         </InputGroup>
         <InputGroup legend="Radio Group">
           {[1, 2, 3].map((i) => (
-            <Radio label={`Radio ${i}`} name="radios" value={i} key={i} />
+            <Radio label={`Radio ${i}`} id={`radio-${i}`} name="radios" value={i} key={i} />
           ))}
         </InputGroup>
         <InputGroup legend="Field Group">
@@ -59,7 +60,7 @@ export const FormsDemo = () => {
       </Grid>
 
       <Grid as="form" columns={1} mb={8}>
-        <TextArea label="Text Area" />
+        <TextArea label="Text Area" id="textarea" name="textarea" />
       </Grid>
     </>
   )
