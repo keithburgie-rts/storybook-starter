@@ -1734,6 +1734,16 @@
     "@reach/utils" "0.12.1"
     tslib "^2.0.0"
 
+"@reach/alert@^0.12.1":
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/@reach/alert/-/alert-0.12.1.tgz#16b9493aaae3b41dbf945517d881bbbda0f79930"
+  integrity sha512-kIVsKgc4Vv3jFfzBEFdDmwWekMQaDfOhmJLAZczMMI/t4wqQjLANU6JVmRZsOF13/Wj2cMFNje/CIZU/VCVdsA==
+  dependencies:
+    "@reach/utils" "0.12.1"
+    "@reach/visually-hidden" "0.12.0"
+    prop-types "^15.7.2"
+    tslib "^2.0.0"
+
 "@reach/auto-id@0.12.1":
   version "0.12.1"
   resolved "https://registry.yarnpkg.com/@reach/auto-id/-/auto-id-0.12.1.tgz#2e4a7250d2067ec16a9b4ea732695bc75572405c"
@@ -1768,6 +1778,13 @@
     "@types/warning" "^3.0.0"
     tslib "^2.0.0"
     warning "^4.0.3"
+
+"@reach/visually-hidden@0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@reach/visually-hidden/-/visually-hidden-0.12.0.tgz#c6c39f0bf292ae97a480ba3ed32e8a6149e852d4"
+  integrity sha512-VXtyR36WOS0FHmFQ/BzfswwPyBXICl/YjmTPtx/I0Vy5C6djjhD9kDsE+h/FpHzP3ugTdqdqiPBVElIZTSwOSA==
+  dependencies:
+    tslib "^2.0.0"
 
 "@rollup/plugin-node-resolve@^7.1.1":
   version "7.1.3"

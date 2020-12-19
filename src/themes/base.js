@@ -20,6 +20,7 @@ import { darken } from '@theme-ui/color'
  */
 
 import {
+  alerts,
   breakpoints,
   buttons,
   forms,
@@ -38,10 +39,12 @@ import {
   letterSpacings,
   cards,
   // shadows,
-  // zIndices
-} from '../partials'
+  zIndices,
+} from './partials'
 
-export const theme = {
+export default {
+  name: 'Base',
+  alerts,
   breakpoints,
   colors,
   fonts,
@@ -59,6 +62,11 @@ export const theme = {
   text,
   forms,
   cards,
+  zIndices,
+  shadows: {
+    default: '0 1px 3px 1px rgba(0,0,0,.25)',
+    none: 'none',
+  },
 
   styles: {
     root: {
