@@ -25,7 +25,7 @@ export const letterSpacings = {
 
 export const text = {
   default: {
-    color: 'text',
+    color: 'inherit',
     fontFamily: 'body',
     lineHeight: 'body',
     fontWeight: 'body',
@@ -38,7 +38,7 @@ export const text = {
     fontSize: 0,
   },
   heading: {
-    color: 'text',
+    color: 'inherit',
     fontFamily: 'heading',
     lineHeight: 'heading',
     fontWeight: 'heading',

@@ -9,7 +9,7 @@ export const SectionGroup = ({ label, children }) => {
       sx={{
         py: 4,
         '& + &': {
-          borderTop: (theme) => `1px solid ${theme.colors.borders}`,
+          borderTop: (theme) => `1px solid ${theme.colors.secondary}`,
         },
       }}
     >

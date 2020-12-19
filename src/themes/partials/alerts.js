@@ -4,7 +4,7 @@ export const alerts = {
     bg: 'primary',
   },
   muted: {
-    color: 'text',
+    color: 'primary',
     bg: 'muted',
   },
 }

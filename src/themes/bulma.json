@@ -1,0 +1,142 @@
+{ "name": "Bulma",
+    "colors": {
+      "black": "hsl(0, 0%, 4%)",
+      "blackBis": "hsl(0, 0%, 7%)",
+      "blackTer": "hsl(0, 0%, 14%)",
+      "greyDarker": "hsl(0, 0%, 21%)",
+      "greyDark": "hsl(0, 0%, 29%)",
+      "grey": "hsl(0, 0%, 48%)",
+      "greyLight": "hsl(0, 0%, 71%)",
+      "greyLighter": "hsl(0, 0%, 86%)",
+      "whiteTer": "hsl(0, 0%, 96%)",
+      "whiteBis": "hsl(0, 0%, 98%)",
+      "white": "hsl(0, 0%, 100%)",
+      "orange": "hsl(14,  100%, 53%)",
+      "yellow": "hsl(48,  100%, 67%)",
+      "green": "hsl(141, 71%,  48%)",
+      "turquoise": "hsl(171, 100%, 41%)",
+      "cyan": "hsl(204, 86%,  53%)",
+      "blue": "hsl(217, 71%,  53%)",
+      "purple": "hsl(271, 100%, 71%)",
+      "red": "hsl(348, 100%, 61%)",
+      "text": "hsl(0, 0%, 29%)",
+      "background": "hsl(0, 0%, 100%)",
+      "primary": "hsl(217, 71%,  53%)",
+      "muted": "hsl(0, 0%, 96%)",
+      "info": "hsl(204, 86%,  53%)",
+      "success": "hsl(141, 71%,  48%)",
+      "warning": "hsl(48,  100%, 67%)",
+      "danger": "hsl(348, 100%, 61%)",
+      "light": "hsl(0, 0%, 96%)",
+      "dark": "hsl(0, 0%, 21%)",
+      "modes": {
+        "invert": {}
+      }
+    },
+    "fonts": {
+      "body": "BlinkMacSystemFont, -apple-system, \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif",
+      "heading": "inherit",
+      "monospace": "monospace"
+    },
+    "fontSizes": [
+      "0.75rem",
+      "0.875rem",
+      "1rem",
+      "1.25rem",
+      "1.5rem",
+      "1.75rem",
+      "2rem",
+      "2.5rem",
+      "3rem"
+    ],
+    "fontWeights": {
+      "body": 400,
+      "heading": 700,
+      "bold": 700,
+      "light": 300,
+      "medium": 500,
+      "semibold": 500
+    },
+    "space": [
+      "0rem",
+      "0.5rem",
+      "1rem",
+      "1.5rem",
+      "2rem",
+      "2.5rem",
+      "3rem"
+    ],
+    "styles": {
+      "root": {
+        "fontFamily": "body",
+        "lineHeight": "body",
+        "fontWeight": "body"
+      },
+      "a": {
+        "color": "primary",
+        "textDecoration": "none",
+        ":hover": {
+          "textDecoration": "underline"
+        }
+      },
+      "h1": {
+        "fontFamily": "heading",
+        "fontWeight": "heading",
+        "lineHeight": "heading",
+        "m": 0,
+        "mb": 1,
+        "fontSize": 6,
+        "mt": 2
+      },
+      "h2": {
+        "fontFamily": "heading",
+        "fontWeight": "heading",
+        "lineHeight": "heading",
+        "m": 0,
+        "mb": 1,
+        "fontSize": 5,
+        "mt": 2
+      },
+      "h3": {
+        "fontFamily": "heading",
+        "fontWeight": "heading",
+        "lineHeight": "heading",
+        "m": 0,
+        "mb": 1,
+        "fontSize": 4,
+        "mt": 3
+      },
+      "h4": {
+        "fontFamily": "heading",
+        "fontWeight": "heading",
+        "lineHeight": "heading",
+        "m": 0,
+        "mb": 1,
+        "fontSize": 3
+      },
+      "h5": {
+        "fontFamily": "heading",
+        "fontWeight": "heading",
+        "lineHeight": "heading",
+        "m": 0,
+        "mb": 1,
+        "fontSize": 2
+      },
+      "h6": {
+        "fontFamily": "heading",
+        "fontWeight": "heading",
+        "lineHeight": "heading",
+        "m": 0,
+        "mb": 2,
+        "fontSize": 1
+      },
+      "code": {},
+      "pre": {},
+      "hr": {
+        "bg": "muted",
+        "border": 0,
+        "height": "1px",
+        "m": 3
+      }
+    }
+  }

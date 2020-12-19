@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Divider } from 'theme-ui'
+import { Box } from 'theme-ui'
 import { Button } from '../../lib/components/atoms'
 
 export const ButtonDemo = () => {

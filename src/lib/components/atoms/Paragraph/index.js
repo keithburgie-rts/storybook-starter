@@ -18,6 +18,6 @@ export const Paragraph = ({ value, variant = 'default', children, ...rest }) => 
 
 Paragraph.propTypes = {
   variant: PropTypes.oneOf(textTypes),
-  children: PropTypes.string,
-  value: PropTypes.string,
+  children: PropTypes.node,
+  value: PropTypes.node,
 }

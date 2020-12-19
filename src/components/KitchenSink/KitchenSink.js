@@ -1,20 +1,19 @@
 import { ColorPalette } from '@theme-ui/style-guide'
 import React from 'react'
 import { Box, Grid, Image } from 'theme-ui'
+import { headingTypes, textTypes, listTypes } from '../../lib/types'
 import { Heading, Paragraph } from '../../lib/components/atoms'
 import { List, SectionGroup } from '../../lib/components/molecules'
+import { Alerts } from '../../lib/components/molecules/Alerts'
 import { Accordion } from '../../lib/components/organisms/'
-import { ButtonDemo } from './ButtonDemo'
-import { FontFamilies } from './FontFamilies'
-import { FormsDemo } from './FormsDemo'
-import { TypeScale } from './TypeScale'
-import { headingTypes, textTypes, listTypes } from '../../lib/types'
-import { Alert } from '../../lib/components/molecules/Alert'
+import { ButtonDemo, FontFamilies, FormsDemo, TypeScale } from './'
 
 const DEMO_HEADING = 'This is an example heading'
 
 const DEMO_PARAGRAPH =
-  'Lead variant eenig der leven ter als nam. Al ad te bezit komst ficus op. Is ploeg of groen ze wijze japan er. Boringen langzaam ik kolonien te strooien ze. Ons ander enkel bak roode dit sinds meest het. Dit had geslaagd generaal een afstands. Maleiers bevatten deeltjes behoefte in mogelijk en.'
+  'Var eenig der leven ter als nam. Al ad te bezit komst ficus op. Is ploeg of groen ze wijze japan er. Boringen langzaam ik kolonien te strooien ze. Ons ander enkel bak roode dit sinds meest het. Dit had geslaagd generaal een afstands. Maleiers bevatten deeltjes behoefte in mogelijk en.'
+
+const DEMO_PARAGRAPH_SHORT = `${DEMO_PARAGRAPH.substring(0, DEMO_PARAGRAPH.length / 3)}…`
 
 const DEMO_LIST_ITEMS = ['The first item', 'The second item', 'The third item']
 
@@ -35,11 +34,30 @@ const DEMO_ACCORDION_ITEMS = [
   },
 ]
 
+const DEMO_ALERTS = [
+  {
+    id: 0,
+    heading: 'Top Alert',
+    message: DEMO_PARAGRAPH_SHORT,
+    show: true,
+    // action: () => console.log('Some other action'),
+  },
+  {
+    id: 1,
+    heading: 'Side Alert',
+    message: DEMO_PARAGRAPH_SHORT,
+    position: 'side',
+    variant: 'muted',
+    show: true,
+  },
+]
+
 export const KitchenSink = () => {
   return (
     <>
-      <Alert heading="I'm an alert" message={DEMO_PARAGRAPH} />
-      <Grid gap={0} columns={[1, 2]} sx={{ columnGap: 2, mb: 8 }}>
+      <Alerts alerts={DEMO_ALERTS} />
+
+      <Grid gap={2} columns={[1, 2]}>
         <Box sx={{ bg: 'muted', px: 4 }}>
           {headingTypes.map((h) => (
             <SectionGroup label={h} key={h}>
